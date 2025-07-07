@@ -319,7 +319,7 @@ Success! Data written to: auth/userpass/users/admin
 ```
 
 ## Testing 
-On login, a new token is generated for this user and overrides ~/.vault-token content.
+On login, a new token is generated for this user and overwrites ~/.vault-token content.
 ```
 $ vault login -method=userpass username=admin
 Password (will be hidden): 
