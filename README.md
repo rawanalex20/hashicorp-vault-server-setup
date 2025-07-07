@@ -391,3 +391,6 @@ password
 - https://developer.hashicorp.com/vault/docs/get-started/operations-qs
 - https://devopscube.com/setup-hashicorp-vault-beginners-guide/
 - https://medium.com/@martin.hodges/vault-secrets-engines-paths-and-roles-explained-aa3e1a84037d
+
+# Author
+https://github.com/rawanalex20
