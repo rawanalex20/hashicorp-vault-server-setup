@@ -1,22 +1,15 @@
-import requests
 import os
+import hvac
 
 def main():
     address = os.environ['VAULT_ADDR']
-    url = f'{address}/v1/secrets/data/example'
-    token = os.environ['VAULT_TOKEN']
-    headers =  {"X-Vault-Token": token}
     try:
-        response = requests.get(url, headers=headers)
+        client = hvac.Client(address)
+        response = client.secrets.kv.read_secret_version(path='example', mount_point='secrets', raise_on_deleted_version=False)
+        print(response['data']['data']['password'])
 
-        if response.status_code == 200:
-            response = response.json()
-            print(response['data']['data']['password'])
-        else:
-            print('Error:', response.status_code)
-
-    except requests.exceptions.RequestException as e:
-        print('Error:', e)
+    except hvac.exceptions.VaultError as vaulterror:
+          print(vaulterror)
     
 if __name__ == '__main__':
     main()
