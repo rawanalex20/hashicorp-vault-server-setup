@@ -205,8 +205,8 @@ vault status
 Note: make sure to open 8200 port on firewall for client access outside.
 
 ```
-sudo firewalld-cmd --add-port=8200/tcp --permanent
-sudo firewalld-cmd --reload
+sudo firewall-cmd --add-port=8200/tcp --permanent
+sudo firewall-cmd --reload
 ```
 **Now you can login to UI at *http://{address}:8200/ui* with the root token.**
 
