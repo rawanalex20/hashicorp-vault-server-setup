@@ -70,7 +70,7 @@ ui = true
 ### Breaking down the configuration
 - **listener** parameter configures how server listens to API requests. 
 - **api_addr**: URL for client API calls.
-- **storage**: The storage backend configuration. Here the storage backend is a filesystem where data is stored in the specified path. Vault server is the only component that interacts with the backend storage.
+- **storage**: The storage backend configuration. Here the storage backend is a filesystem where data is stored in the specified path. Vault server is the only component that interacts with the backend storage. Note that in Highly Available setup other storage backends should be used. Consul is a hashicorp supported solution for HA.
 - **max_lease_ttl**: Maximum token time to live. The token is invalid after this lease duration.
 - **default_lease_ttl**: Deafult token lease duration.
 - **ui**: Enables the web UI that is accessed at listener /ui path, http://{address}:{port}/ui.
