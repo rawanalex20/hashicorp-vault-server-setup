@@ -285,7 +285,7 @@ username    name
 
 Another way to get the secret data via CLI is `vault kv get secrets/example`.
 
-The output shows the full secret path, metadata and secret data. This data along with the API and CLI paths can be shown in the UI and will be useful when testing with API calls to these endpoints. The varsion shown in Metadata is 2 as the secret was modified. This is a featre in version 2 of kv plugin which is versioning.
+The output shows the full secret path, metadata and secret data. This data along with the API and CLI paths can be shown in the UI and will be useful when testing with API calls to these endpoints. The version shown in Metadata is 2 as the secret was modified. This is a featre in version 2 of kv plugin which is versioning.
 
 # Authentication
 To enable user authentication to login with username and password userpass plugin can be used by enabling userpass authentication method.
