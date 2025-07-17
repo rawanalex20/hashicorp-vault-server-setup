@@ -85,7 +85,7 @@ To start the server run:
 ```
 vault server -dev
 ```
-This will run the server foreground and another terminal will be needed to run commands.
+This will run the server foreground and will leave it like that to check the output. Another terminal will be needed to run commands.
 
 The unseal key and root token will show as part of the output. They need to be saved and as it is a dev server securing them is not that critical.
 ```
